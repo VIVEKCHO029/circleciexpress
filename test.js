@@ -1,3 +1,4 @@
+
 const assert = require("assert");
 const httpMocks = require("node-mocks-http");
 const exampleRouteHandler = require("./example-router");
@@ -10,7 +11,10 @@ describe("Example Test 1", () => {
     const mockResponse = httpMocks.createResponse();
     exampleRouteHandler(mockRequest, mockResponse);
     const actualResponseBody = mockResponse._getData();
+    console.log("Printing actual response");
+    console.log(actualResponseBody);
     const expectedResponseBody = "Goodbye Earthling!";
-    assert(actualResponseBody, expectedResponseBody);
+    console.log(assert(actualResponseBody, expectedResponseBody));
+    console.log(assert(1, 1));
   });
 });
